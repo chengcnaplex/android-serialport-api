@@ -1,7 +1,9 @@
 # android-serialport-api
 
 
-##修复google 提供的串口工具android-serialport-api丢失字节bug。由于在issues多人提出丢失字节的bug，却没人修改，所以作者做出如下修复。
+##修复google 提供的串口工具android-serialport-api丢失字节bug。
+
+由于在issues多人提出丢失字节的bug，却没人修改，所以程梦真通过如下方式修复该bug，其真实的bug原因是由于关闭Activity的时候输入流的read方法被阻塞，以至于关闭Activity，但GC不能释放，导致下一次接收导数据时，数据先给了没有被释放的Activity，然后之后收到的数据才给新创建的Activity。
 
 1.  在SerialPortActivity中ReadThread添加
 
