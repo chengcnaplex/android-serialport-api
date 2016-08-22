@@ -11,7 +11,7 @@
  - [app地址](https://code.google.com/archive/p/android-serialport-api/downloads)
  
  
-**2.后由测试[刘涛](https://github.com/TonySudo)测试出除非开关接收串口数据的activity，会导致数据丢失**
+**2.后由测试[刘涛](https://github.com/TonySudo)测试出 重复开关接收串口数据的activity，会导致数据丢失**
 
 **3.和[曾剑锋](https://github.com/AplexOS)讨论可是能线程中inputstream.read()这个阻塞方法导致线程没走完，线程非静态对activity持有隐示应用，造成acvitity泄露，一旦有数据进入，就会被上一个activity线程中的inputstream.read()给吃掉一个数据**
 
