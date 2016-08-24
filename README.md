@@ -56,7 +56,7 @@
               		}
               	}
 
-**6.修改后用内存测试工具，发现解决了泄露的问题，每一次activity都被释放了。**
+**6.修改后用内存测试工具，解决了泄露的问题，每一次activity都被释放了。**
  
 [修改后项目地址](https://github.com/chengcnaplex/android-serialport-api)
 
